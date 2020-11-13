@@ -1,10 +1,12 @@
-baseurl         = "/"
+baseurl         = "http://eData.io"
 theme = "hugo-casper-two"
 languageCode    = "en-US"
 disqusShortname = ""
 paginate        = 6
 #SectionPagesMenu = "main"
 canonifyurls    = true
+enableRobotsTXT = true
+canonifyurls = true
 
 [params]
   title       = "Hugo Casper Two"
