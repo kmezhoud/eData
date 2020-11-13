@@ -1,4 +1,4 @@
-baseurl         = "https://edata.ga/"
+baseurl         = "https://edata.ga"
 theme = "hugo-casper-two"
 languageCode    = "en-US"
 disqusShortname = ""
