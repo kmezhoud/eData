@@ -6,7 +6,6 @@ paginate        = 6
 #SectionPagesMenu = "main"
 canonifyurls    = true
 enableRobotsTXT = true
-canonifyurls = true
 
 [params]
   title       = "Hugo Casper Two"
