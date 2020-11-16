@@ -6,13 +6,22 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 02 Jun 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://edata.ga/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://edata.ga/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Development</title>
       <link>https://edata.ga/categories/development/</link>
-      <pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://edata.ga/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://edata.ga/categories/r/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://edata.ga/categories/r/</guid>
       <description></description>
     </item>
     
