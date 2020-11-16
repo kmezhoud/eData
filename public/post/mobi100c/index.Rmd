@@ -36,8 +36,8 @@ Steps to follow:
 * Display the Total of the order
 * Checkout and Confirm order.
 
-#<div style="margin-bottom:350px;">
-#</div>
+<div style="margin-bottom:0px;">
+</div>
 
 ## Stock management with office login
 
@@ -50,8 +50,8 @@ Steps to follow:
 * Confirm order and send to customers
 
 
-#<div style="margin-bottom:400px;">
-#</div>
+<div style="margin-bottom:0px;">
+</div>
 
 ## Send email to inform Customer/office
 
