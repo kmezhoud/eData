@@ -2,17 +2,17 @@
 title: 'mobi100c: Mobile app for ordering and Stores managment System'
 author: "Kirus"
 date: '2020-11-13'
+categories:
+- Development
+- R
+tags:
+- Business
+- development
+- mobile
+- web
 description: A shiny mobile App for business Solution.
 image: img/tracking.png
 slug: mobi100c
-categories:
-- R
-- Development
-tags:
-- development
-- Business
-- mobile
-- web
 ---
 
 <img src="logo.png" alt="logo" align="right" width="200" style="padding: 0 0 10px 10px;" />
@@ -36,6 +36,9 @@ Steps to follow:
 * Display the Total of the order
 * Checkout and Confirm order.
 
+<div style="margin-bottom:350px;">
+</div>
+
 ## Stock management with office login
 
 <img src="office.png" alt="store" align="right" width="450" height="550" style="padding: 0 0 10px 10px;" />
@@ -44,6 +47,10 @@ Steps to follow:
 
 * Select row from table to edit/copy/delete or add new one
 * Confirm order and send to customers
+
+
+<div style="margin-bottom:350px;">
+</div>
 
 ## Send email to inform Customer/office
 
