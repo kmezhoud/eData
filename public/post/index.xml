@@ -38,12 +38,13 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
-      <title>mobi100c</title>
+      <title>mobi100c: Mobile app for ordering and Stores management System</title>
       <link>https://edata.ga/post/mobi100c/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://edata.ga/post/mobi100c/</guid>
-      <description></description>
+      <description>Mobi100c is a web/mobile app with multiple login profiles.
+The Customer login can browse items by categories, and order selected articles. The app displays the orders history and corresponding status (pending, shipping, or shipped). The office login displays in editable table the list of sold items and its information including available stock. The office can add easily update stock, add, or remove items. The app is build to connect to SQLite, MySQL and MMSQL databases.</description>
     </item>
     
     <item>
@@ -63,7 +64,7 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       <pubDate>Tue, 14 Apr 2015 22:17:00 +0000</pubDate>
       
       <guid>https://edata.ga/post/about-me/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Yow !</description>
+      <description>I am Agronome turned to Bioinformatics, turned to Data Scientist and Associate Professor in Nuclear Science Center of Tunisia - Tunis. I am teaching Structural Bioinformatics and Introduction to R for Biology. I started data Exploration and analysis of Cancer Diseases, including epigenomics, and image classification using Bioinformatics, System Biology, Biostatistics and learning machine. I extend my skills to other type of data, like business, marketing or social for exploration, analysis and prediction.</description>
     </item>
     
     <item>

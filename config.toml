@@ -8,9 +8,9 @@ canonifyurls    = true
 enableRobotsTXT = true
 
 [params]
-  title       = "Hugo Casper Two"
-  subtitle    = "Port of Casper 2.x for Hugo"
-  copyright   = "© 2018"
+  title       = "Business Solution"
+  subtitle    = "Data Science Service"
+  copyright   = "© 2020"
 
   cover       = "img/blog-cover.jpg"
   description = "Here is a description of your site."
@@ -19,29 +19,29 @@ enableRobotsTXT = true
   customCSS = []
   RSSLink = ""
 
-  twitterName = "faketryghost"
-  fbName = "fakeghost"
-  githubName = "eueung"
-  linkedinName = "eueung"
+  twitterName = "@Mezhoud90305294"
+  #fbName = "fakeghost"
+  githubName = "kmezhoud"
+  linkedinName = "karim-mezhoud"
   mediumName = ""
 
-  logo = "hugo-logo.png"
+  logo = ""
   orgName = "EM"
-  orgWebsite = "https://www.telematika.org"
+  orgWebsite = "https://edata.ga/"
   orgDescription = "Here is a description placeholder for your org"
 
   showSupport = true
 
-  author = "EM"
-  authorAvatar = "img/ghost-icon.png"
-  authorLocation = "Bandung, ID"
-  authorWebsite = "https://eueung.github.io"
-  authorDescription = "Your description here"
+  author = "kirus"
+  authorAvatar = "img/kmezhoud.jpg"
+  authorLocation = "Tunisia, TN"
+  authorWebsite = "https://kmezhoud.github.io"
+  authorDescription = "Data Scientist"
 
   pageNotFoundTitle = "404 - Page not found"
 
   #casper or caspertwo
-  singleViewStyle = "casper"
+  singleViewStyle = "caspertwo"
 
 [permalinks]
   post = "/post/:slug/"
