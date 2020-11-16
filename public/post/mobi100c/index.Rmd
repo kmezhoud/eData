@@ -1,5 +1,5 @@
 ---
-title: "mobi100c: Mobile app for ordering and Stores management System" 
+title: 'mobi100c: Mobile app for ordering and Stores management System'
 author: "Kirus"
 date: '2020-11-13'
 description: A shiny mobile App for business Solution.
@@ -13,7 +13,6 @@ tags:
 - Business
 - mobile
 - web
-mainfont: arev
 ---
 
 <img src="logo.png" alt="logo" align="right" width="200" style="padding: 0 0 10px 10px;" />
