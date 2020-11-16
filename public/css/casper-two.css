@@ -74,3 +74,11 @@
 .post-full-content pre code {
     color: #e5eff5;
 }    
+
+.site-title {
+    font-weight: 200;
+    font-size: 7rem;
+}
+.site-header:before {
+    background: rgba(0, 0, 0, 0.5);
+}
