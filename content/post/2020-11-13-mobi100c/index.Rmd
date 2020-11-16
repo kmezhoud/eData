@@ -49,7 +49,7 @@ Steps to follow:
 * Confirm order and send to customers
 
 
-<div style="margin-bottom:350px;">
+<div style="margin-bottom:400px;">
 </div>
 
 ## Send email to inform Customer/office
