@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
+=======
+{{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" "post") }}
+>>>>>>> 3749830403f6438104a9c1acd0d2dc2acdbfc731
 {{ range $paginator.Pages }}
 
 <article class="post-card post"> 

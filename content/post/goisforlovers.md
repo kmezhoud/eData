@@ -3,9 +3,7 @@ categories:
 - Development
 - golang
 date: "2014-04-02"
-description: This is a description. Hugo uses the **excellent** go html/template library
-  for its template engine. It is an extremely lightweight engine that provides a very
-  small amount of logic.
+description: This is a description. Hugo uses the **excellent** go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic.
 image: img/writing.jpg
 nomenu: main
 tags:

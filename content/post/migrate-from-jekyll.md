@@ -1,5 +1,7 @@
 ---
-date: "2014-03-10"
+title: Migrate to Hugo from Jekyll
+author: ''
+date: '2014-03-10'
 image: img/team.jpg
 linktitle: Migrating from Jekyll
 nomenu:
@@ -7,7 +9,6 @@ nomenu:
     parent: tutorials
 noweight: 10
 prev: /tutorials/mathjax
-title: Migrate to Hugo from Jekyll
 ---
 
 ## Move static content to `static`

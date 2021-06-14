@@ -6,20 +6,20 @@ paginate: 6
 canonifyurls: yes
 params:
   RSSLink: ''
-  author: EM
-  authorAvatar: img/ghost-icon.png
-  authorDescription: Your description here
-  authorLocation: Bandung, ID
-  authorWebsite: https://eueung.github.io
-  copyright: © 2018
+  author: KM
+  authorAvatar: img/kmezhoud.jpg
+  authorDescription: Data Scientist
+  authorLocation: Tunisia, TN
+  authorWebsite: https://kmezhoud.github.io
+  copyright: ©2021
   cover: img/blog-cover.jpg
   customCSS: []
   description: Here is a description of your site.
   fbName: fakeghost
   githubName: eueung
   googleAnalytics: ''
-  linkedinName: eueung
-  logo: hugo-logo.png
+  linkedinName: karim-mezhoud
+  logo: ''
   mediumName: ''
   metaDescription: ''
   orgDescription: Here is a description placeholder for your org
@@ -28,8 +28,8 @@ params:
   pageNotFoundTitle: 404 - Page not found
   showSupport: yes
   singleViewStyle: casper
-  subtitle: Port of Casper 2.x for Hugo
-  title: Hugo Casper Two
+  subtitle: Data Science Service
+  title: Business Solution
   twitterName: faketryghost
 permalinks:
   post: /post/:slug/
