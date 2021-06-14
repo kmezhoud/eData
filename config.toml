@@ -1,4 +1,4 @@
-baseurl         = "https://edata.ga"
+baseurl         = "/"
 theme = "hugo-casper-two"
 languageCode    = "en-US"
 disqusShortname = ""
@@ -12,7 +12,7 @@ enableRobotsTXT = true
   subtitle    = "Data Science Service"
   copyright   = "© 2020"
 
-  cover       = "img/blog-cover.jpg"
+  cover       = "img/network-3357642_640.jpg"
   description = "Here is a description of your site."
   metaDescription = ""
   googleAnalytics = ""
@@ -20,13 +20,13 @@ enableRobotsTXT = true
   RSSLink = ""
 
   twitterName = "@Mezhoud90305294"
-  #fbName = "fakeghost"
+  fbName = "kirusmagnus"
   githubName = "kmezhoud"
   linkedinName = "karim-mezhoud"
   mediumName = ""
 
-  logo = ""
-  orgName = "EM"
+  logo = "" #favicon.ico
+  orgName = "KM"
   orgWebsite = "https://edata.ga/"
   orgDescription = "Here is a description placeholder for your org"
 
@@ -51,19 +51,20 @@ enableRobotsTXT = true
   url = "/"
   weight = 200
 
-[[menu.main]]
-  name = "Go"
-  url = "/tags/golang/"
-  weight = 100
+#[[menu.main]]
+#  name = "Go"
+#  url = "/tags/golang/"
+#  weight = 100
 
-[[menu.main]]
-  name = "Categories"
-  url = "/categories/"
-  weight = 99
+#[[menu.main]]
+#  name = "Categories"
+#  url = "/categories/"
+#  weight = 99
 
-[[menu.main]]
-  name = "External"
-  url = "https://google.com/"
-  weight = 95
+#[[menu.main]]
+  #name = "External"
+  #url = "https://google.com/"
+  #weight = 95
 
 
+#ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
