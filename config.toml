@@ -27,7 +27,7 @@ enableRobotsTXT = true
 
   logo = "" #favicon.ico
   orgName = "KM"
-  orgWebsite = "https://edata.ga/"
+  orgWebsite = "/"
   orgDescription = "Here is a description placeholder for your org"
 
   showSupport = true
