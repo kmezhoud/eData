@@ -2,17 +2,17 @@
 title: 'mobi100c: Mobile app for ordering and Stores managment System'
 author: "Kirus"
 date: '2020-11-13'
-categories:
-- Development
-- R
+description: A shiny mobile App for business Solution.
+image: img/tracking.png
+slug: mobi100c
 tags:
 - Business
 - development
 - mobile
 - web
-description: A shiny mobile App for business Solution.
-image: img/tracking.png
-slug: mobi100c
+categories:
+- development
+- R
 ---
 
 <img src="logo.png" alt="logo" align="right" width="200" style="padding: 0 0 10px 10px;" />

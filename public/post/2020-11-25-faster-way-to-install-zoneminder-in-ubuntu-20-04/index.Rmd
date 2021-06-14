@@ -1,0 +1,161 @@
+---
+title: "Faster way to install ZoneMinder in Ubuntu 20.04"
+author: "Kirus"
+date: '2020-11-25'
+description: Faster way to install ZoneMinder in Ubuntu-20.04
+image: img/tracking.png
+slug: faster-way-to-install-zoneminder-in-ubuntu-20-04
+tags: development
+categories: development
+---
+
+
+[Zoneminder](https://zoneminder.com/) is one of the most famous and a full-featured, open source, state-of-the-art video surveillance software system.
+
+In the [official documentation](https://zoneminder.readthedocs.io/en/latest/installationguide/index.html) and  [Wiki pages](https://wiki.zoneminder.com/Helpful_user_contributed_resources) of ZoneMinder, there are multiple ways to install the software and all dependencies (php, mySQL, and mariaDB)
+
+In this post we will resume how we can install easily the last release of ZoneMinder in Ubuntu distribution.
+
+## Install dependencies
+
+```{bash eval = FALSE}
+sudo apt install apache2 php mariadb-server php-mysql libapache2-mod-php
+```
+
+## Install zoneMinder 1.34
+
+Open a new text file an include this piece of code.
+
+```{bash eval=FALSE}
+#!/bin/sh
+clear
+read -p "This script installs Zoneminder 1.34.x on Ubuntu 20.04 or 18.04 with LAMP (MySQL or Mariadb) installed...
+Press Enter to continue or Ctrl + c to quit" nothing
+clear
+read -p "You must be logged in as root using sudo su If you are installing on MySQL 8 perform the additional steps before continuing!
+Press Enter to continue or Ctrl + c to quit" nothing
+clear
+read -p "Next we will add the PPA repository, install and configure the system to run Zoneminder. 
+Press enter to continue" nothing
+apt install -y software-properties-common
+clear
+add-apt-repository ppa:iconnor/zoneminder-1.34
+clear
+apt install -y zoneminder
+systemctl enable zoneminder
+service zoneminder start
+adduser www-data video
+a2enconf zoneminder
+a2enmod rewrite
+a2enmod headers
+a2enmod expires
+service apache2 reload
+clear
+read -p "Install complete. Open Zoneminder/Options and set the timezine. Press enter to continue" nothing
+clear
+```
+
+
+Save the file as `zm_install.sh`. Make it executable and run it as following.
+
+```{bash eval=FALSE}
+chmod 755 zm_install.sh
+sudo ./zm_install.sh
+```
+
+Follow the instruction until the end.
+
+## Check if the install is OK
+
+```{bash eval = FALSE}
+# check version
+dpkg -s zoneminder | grep Version
+
+# start zm
+service zoneminder start
+
+# stop zm
+service zoneminder stop
+
+
+# Check if zoneminder is running
+# if zm is running, you can see all background process which it is running for zm
+ps ax | grep zm
+```
+
+
+## uninstall
+
+```{bash eval = FALSE}
+sudo apt-get remove zoneminder
+sudo apt-get remove --auo-remove zonefinder
+sudo apt-get purge zoneminder
+```
+
+
+## Issues with Camera
+
+```{bash eval =FALSE}
+## aloow access to video device
+sudo chmod 777 /dev/video0
+
+# list detected device??
+sudo zmonvif-probe.pl -v probe
+
+sudo zmu -d /dev/video0 -q -v
+```
+
+
+# ONVIF Device Tool for Ubuntu
+
+[ONVIF](https://www.lingodigit.com/onvif_nvcdemo.html) Device Tool is an ONIVF NVC GUI software on Linux to demo Lingodigit ONVIF NVC Profile S software stack.
+
+The install is working with Zip compressed forlder instead deb package.
+
+In readme file the following script follow installation and run it.
+
+```{bash eval=FALSE}
+Package: onvif-device-tool
+Version: 19.05-20190530
+Architecture: amd64
+Description: ONVIF device tool is a Qt-based ONVIF GUI client with QTGstreamer.
+Maintainer: Hung-Ming Chen <hmchen@lingodigit.com>
+Homepage: https://www.lingodigit.com/onvif_nvc.html
+Depends: libqt5gui5,libqt5gstreamerui-1.0-0,libqt5gstreamer-1.0-0
+
+Usage: 
+sudo apt-get  install libqt5gui5
+sudo apt-get  libqt5gstreamerui-1.0-0
+sudo apt-get  libqt5gstreamer-1.0-0
+sudo install wsdd /usr/local/bin/wsdd 
+sudo install onvif-device-tool  /usr/local/bin/onvif-device-tool 
+./usr/local/bin/onvif-device-tool 
+```
+
+
+
+# DroidCam
+
+Allow to connect from ubuntu to camera of the smart phone
+
+# [Motion](https://motion-project.github.io/index.html)
+
+```{bash eval=FALSE}
+sudo dpkg -i motion.deb
+
+sudo motion
+
+# Visit localhost:8080
+```
+
+
+# shinobi
+
+[Install](https://shinobi.video/docs/start)
+
+
+[Manual uninstall](https://medium.com/@ShinobiSystems/how-to-manually-uninstall-shinobi-e0cc7091cbef)
+
+Detect automatically `/dev/video0`
+
+easy setting for four cameras.

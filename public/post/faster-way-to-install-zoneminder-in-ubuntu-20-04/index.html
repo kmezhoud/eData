@@ -1,0 +1,128 @@
+---
+title: "Faster way to install ZoneMinder in Ubuntu 20.04"
+author: "Kirus"
+date: '2020-11-25'
+description: Faster way to install ZoneMinder in Ubuntu-20.04
+image: img/tracking.png
+slug: faster-way-to-install-zoneminder-in-ubuntu-20-04
+tags: development
+categories: development
+---
+
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
+
+
+<p><a href="https://zoneminder.com/">Zoneminder</a> is one of the most famous and a full-featured, open source, state-of-the-art video surveillance software system.</p>
+<p>In the <a href="https://zoneminder.readthedocs.io/en/latest/installationguide/index.html">official documentation</a> and <a href="https://wiki.zoneminder.com/Helpful_user_contributed_resources">Wiki pages</a> of ZoneMinder, there are multiple ways to install the software and all dependencies (php, mySQL, and mariaDB)</p>
+<p>In this post we will resume how we can install easily the last release of ZoneMinder in Ubuntu distribution.</p>
+<div id="install-dependencies" class="section level2">
+<h2>Install dependencies</h2>
+<pre class="bash"><code>sudo apt install apache2 php mariadb-server php-mysql libapache2-mod-php</code></pre>
+</div>
+<div id="install-zoneminder-1.34" class="section level2">
+<h2>Install zoneMinder 1.34</h2>
+<p>Open a new text file an include this piece of code.</p>
+<pre class="bash"><code>#!/bin/sh
+clear
+read -p &quot;This script installs Zoneminder 1.34.x on Ubuntu 20.04 or 18.04 with LAMP (MySQL or Mariadb) installed...
+Press Enter to continue or Ctrl + c to quit&quot; nothing
+clear
+read -p &quot;You must be logged in as root using sudo su If you are installing on MySQL 8 perform the additional steps before continuing!
+Press Enter to continue or Ctrl + c to quit&quot; nothing
+clear
+read -p &quot;Next we will add the PPA repository, install and configure the system to run Zoneminder. 
+Press enter to continue&quot; nothing
+apt install -y software-properties-common
+clear
+add-apt-repository ppa:iconnor/zoneminder-1.34
+clear
+apt install -y zoneminder
+systemctl enable zoneminder
+service zoneminder start
+adduser www-data video
+a2enconf zoneminder
+a2enmod rewrite
+a2enmod headers
+a2enmod expires
+service apache2 reload
+clear
+read -p &quot;Install complete. Open Zoneminder/Options and set the timezine. Press enter to continue&quot; nothing
+clear</code></pre>
+<p>Save the file as <code>zm_install.sh</code>. Make it executable and run it as following.</p>
+<pre class="bash"><code>chmod 755 zm_install.sh
+sudo ./zm_install.sh</code></pre>
+<p>Follow the instruction until the end.</p>
+</div>
+<div id="check-if-the-install-is-ok" class="section level2">
+<h2>Check if the install is OK</h2>
+<pre class="bash"><code># check version
+dpkg -s zoneminder | grep Version
+
+# start zm
+service zoneminder start
+
+# stop zm
+service zoneminder stop
+
+
+# Check if zoneminder is running
+# if zm is running, you can see all background process which it is running for zm
+ps ax | grep zm</code></pre>
+</div>
+<div id="uninstall" class="section level2">
+<h2>uninstall</h2>
+<pre class="bash"><code>sudo apt-get remove zoneminder
+sudo apt-get remove --auo-remove zonefinder
+sudo apt-get purge zoneminder</code></pre>
+</div>
+<div id="issues-with-camera" class="section level2">
+<h2>Issues with Camera</h2>
+<pre class="bash"><code>## aloow access to video device
+sudo chmod 777 /dev/video0
+
+# list detected device??
+sudo zmonvif-probe.pl -v probe
+
+sudo zmu -d /dev/video0 -q -v</code></pre>
+</div>
+<div id="onvif-device-tool-for-ubuntu" class="section level1">
+<h1>ONVIF Device Tool for Ubuntu</h1>
+<p><a href="https://www.lingodigit.com/onvif_nvcdemo.html">ONVIF</a> Device Tool is an ONIVF NVC GUI software on Linux to demo Lingodigit ONVIF NVC Profile S software stack.</p>
+<p>The install is working with Zip compressed forlder instead deb package.</p>
+<p>In readme file the following script follow installation and run it.</p>
+<pre class="bash"><code>Package: onvif-device-tool
+Version: 19.05-20190530
+Architecture: amd64
+Description: ONVIF device tool is a Qt-based ONVIF GUI client with QTGstreamer.
+Maintainer: Hung-Ming Chen &lt;hmchen@lingodigit.com&gt;
+Homepage: https://www.lingodigit.com/onvif_nvc.html
+Depends: libqt5gui5,libqt5gstreamerui-1.0-0,libqt5gstreamer-1.0-0
+
+Usage: 
+sudo apt-get  install libqt5gui5
+sudo apt-get  libqt5gstreamerui-1.0-0
+sudo apt-get  libqt5gstreamer-1.0-0
+sudo install wsdd /usr/local/bin/wsdd 
+sudo install onvif-device-tool  /usr/local/bin/onvif-device-tool 
+./usr/local/bin/onvif-device-tool </code></pre>
+</div>
+<div id="droidcam" class="section level1">
+<h1>DroidCam</h1>
+<p>Allow to connect from ubuntu to camera of the smart phone</p>
+</div>
+<div id="motion" class="section level1">
+<h1><a href="https://motion-project.github.io/index.html">Motion</a></h1>
+<pre class="bash"><code>sudo dpkg -i motion.deb
+
+sudo motion
+
+# Visit localhost:8080</code></pre>
+</div>
+<div id="shinobi" class="section level1">
+<h1>shinobi</h1>
+<p><a href="https://shinobi.video/docs/start">Install</a></p>
+<p><a href="https://medium.com/@ShinobiSystems/how-to-manually-uninstall-shinobi-e0cc7091cbef">Manual uninstall</a></p>
+<p>Detect automatically <code>/dev/video0</code></p>
+<p>easy setting for four cameras.</p>
+</div>

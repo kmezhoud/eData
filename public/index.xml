@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://edata.ga/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Apr 2015 22:17:00 +0000</lastBuildDate><atom:link href="https://edata.ga/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a New Theme</title>
       <link>https://edata.ga/post/creating-a-new-theme/</link>
@@ -15,16 +15,6 @@
       <guid>https://edata.ga/post/creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>mobi100c: Mobile app for ordering and Stores managment System</title>
-      <link>https://edata.ga/post/mobi100c/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://edata.ga/post/mobi100c/</guid>
-      <description>Mobi100c is a web/mobile app with multiple login profiles.
-The Customer login can browse items by categories, and order selected articles. The app displays the orders history and corresponding status (pending, shipping, or shipped). The office login displays in editable table the list of sold items and its information including available stock. The office can add easily update stock, add, or remove items. The app is build to connect to SQLite, MySQL and MMSQL databases.</description>
     </item>
     
     <item>
